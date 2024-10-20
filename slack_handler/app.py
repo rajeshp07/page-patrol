@@ -223,67 +223,127 @@ def help():
     slack_response = {
         "response_type": "in_channel",
         "blocks": [
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "Please refer below to see how to use the commnands: "
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "*/resolve*\nThis command is to resolve incoming sensu alert.\n*Run: /resolve <entity> <check> *\n\nGet \"entity\" and \"check\" parameters from the alert.\n*Both paramaters are mandatory.* "
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "*/list-incidents*\nThis command is to list the incidents from the status page.\n*Run: /list-incidents*\n"
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "*/create-incident*\nThis command is to create new incident in the status page.\n*Run: /create-incident <name> <description>*\n\n Enter \"name\" and \"description\" parameters of your choice.\n*Both paramaters are mandatory.* "
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "*/update-incident*\nThis command is to update status of incidents in the status page.\n*Run: /update-incident <type> <message>*\n\n\"type\" can have one of the following values:\n*identified, watching, fixed*\n \"message\" can be of your choice.\n*Both paramaters are mandatory.* "
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "*/delete-incident*\nThis command is to delete an incident from the status page.\n*Run: /delete-incident <id>*\n\nTo get \"id\", first list the incidents using /list-incidents command and take the last digit from the link of the incident to be deleted.  "
-                }
-            },
-            {
-                "type": "divider"
-            }
-        ]
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "Please refer below to see how to use the commnands: "
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "header",
+				"text": {
+					"type": "plain_text",
+					"text": "Sensu commands",
+					"emoji": true
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/resolve*\nThis command is to resolve incoming sensu alert.\n*Run: /resolve <entity> <check> *\n\nGet \"entity\" and \"check\" parameters from the alert.\n*Both paramaters are mandatory.* "
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "header",
+				"text": {
+					"type": "plain_text",
+					"text": "Status page commands",
+					"emoji": true
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/list-incidents*\nThis command is to list the incidents from the status page.\n*Run: /list-incidents*\n"
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/create-incident*\nThis command is to create new incident in the status page.\n*Run: /create-incident <name>, <description>*\n\n Enter \"name\" and \"description\" parameters of your choice.\n*Both paramaters are mandatory.* "
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/update-incident*\nThis command is to update status of incidents in the status page.\n*Run: /update-incident <type>, <message>*\n\n\"type\" can have one of the following values:\n*identified, watching, fixed*\n \"message\" can be of your choice.\n*Both paramaters are mandatory.* "
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/delete-incident*\nThis command is to delete an incident from the status page.\n*Run: /delete-incident <id>*\n\nTo get \"id\", first list the incidents using /list-incidents command and take the last digit from the link of the incident to be deleted.  "
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "header",
+				"text": {
+					"type": "plain_text",
+					"text": "Commands to run on host",
+					"emoji": true
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/check-service *\nThis command is to check the status of a service running on a host.\n*Run: /check-service <service> <hostname> *\n\n Enter \"service\" and \"hostname\" parameters of your choice.\n*Both paramaters are mandatory.*"
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/start-service *\nThis command is to start a service on a host.\n*Run: /start-service <service> <hostname> *\n\n Enter \"service\" and \"hostname\" parameters of your choice.\n*Both paramaters are mandatory.*"
+				}
+			},
+			{
+				"type": "divider"
+			},
+			{
+				"type": "section",
+				"text": {
+					"type": "mrkdwn",
+					"text": "*/stop-service *\nThis command is to stop a service on a host.\n*Run: /stop-service <service> <hostname> *\n\n Enter \"service\" and \"hostname\" parameters of your choice.\n*Both paramaters are mandatory.*"
+				}
+			}
+		]
     }
     return slack_response
 
