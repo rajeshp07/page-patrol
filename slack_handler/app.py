@@ -1,3 +1,4 @@
+
 from flask import Flask
 from flask import request
 import os
@@ -237,16 +238,6 @@ def help():
                 "text": {
                     "type": "mrkdwn",
                     "text": "*/resolve*\nThis command is to resolve incoming sensu alert.\n*Run: /resolve <entity> <check> *\n\nGet \"entity\" and \"check\" parameters from the alert.\n*Both paramaters are mandatory.* "
-                }
-            },
-            {
-                "type": "divider"
-            },
-            {
-                "type": "section",
-                "text": {
-                    "type": "mrkdwn",
-                    "text": "*/silence*\nUse:"
                 }
             },
             {
