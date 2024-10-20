@@ -237,8 +237,7 @@ def help():
 				"type": "header",
 				"text": {
 					"type": "plain_text",
-					"text": "Sensu commands",
-					"emoji": true
+					"text": "Sensu commands"
 				}
 			},
 			{
@@ -258,8 +257,7 @@ def help():
 				"type": "header",
 				"text": {
 					"type": "plain_text",
-					"text": "Status page commands",
-					"emoji": true
+					"text": "Status page commands"
 				}
 			},
 			{
@@ -309,8 +307,7 @@ def help():
 				"type": "header",
 				"text": {
 					"type": "plain_text",
-					"text": "Commands to run on host",
-					"emoji": true
+					"text": "Commands to run on host"
 				}
 			},
 			{
